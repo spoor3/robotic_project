@@ -1,0 +1,97 @@
+import cv2
+import numpy as np
+from directkeys import PressKey, ReleaseKey, W, A, D
+
+# Initialize the camera capture
+cap = cv2.VideoCapture(0)
+
+
+flip = False
+key_pressed_w = False
+key_pressed_a = False
+key_pressed_d = False
+da
+
+while True:
+    ret, frame = cap.read()
+    if not ret:
+        break
+
+    H, W, _ = frame.shape
+
+    # Flip the frame horizontally if flip is True
+    if flip:
+        frame = cv2.flip(frame, 1)
+
+    hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
+    value = (11, 11)
+    blurred = cv2.GaussianBlur(hsv, value, 0)
+    colourLower = np.array([0, 0, 255])
+    colourUpper = np.array([180, 255, 255])
+    mask = cv2.inRange(blurred, colourLower, colourUpper)
+    mask = cv2.morphologyEx(mask, cv2.MORPH_OPEN, np.ones((5, 5), np.uint8))
+    mask = cv2.morphologyEx(mask, cv2.MORPH_CLOSE, np.ones((5, 5), np.uint8))
+    for_contour = mask[H // 2 - 100:H, W // 2 - 50:W // 2 + 50]
+    right_contour = mask[H // 2 - 100:H, W // 2 + 50:W]
+    left_contour = mask[H // 2 - 100:H, W // 2 - 50:0]
+    cnts_for = cv2.findContours(for_contour, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+    cnts_right = cv2.findContours(right_contour, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+    cnts_left = cv2.findContours(left_contour, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+
+    if len(cnts_for) > 0:
+        if not key_pressed_w:
+            PressKey(W)  # Press 'W' key for forward
+            key_pressed_w = True
+    else:
+        if key_pressed_w:
+            ReleaseKey(W)  # Release 'W' key
+            key_pressed_w = False
+
+    if len(cnts_right) > 0:
+        if not key_pressed_d:
+            PressKey(D)  # Press 'D' key for right
+            key_pressed_d = True
+    else:
+        if key_pressed_d:
+            ReleaseKey(D)  # Release 'D' key
+            key_pressed_d = False
+
+    if len(cnts_left) > 0:
+        if not key_pressed_a:
+            PressKey(A)  # Press 'A' key for left
+            key_pressed_a = True
+    else:
+        if key_pressed_a:
+            ReleaseKey(A)  # Release 'A' key
+            key_pressed_a = False
+
+    
+    line_color = (0, 255, 0) 
+    line_thickness = 2
+
+    # Line 1
+    cv2.line(frame, (0, H // 2 - 100), (W, H // 2 - 100), line_color, line_thickness)
+
+    # Line 2
+    cv2.line(frame, (W // 2 - 50, H), (W // 2 - 50, H // 2 - 100), line_color, line_thickness)
+
+    # Line 3
+    cv2.line(frame, (W // 2 + 50, H), (W // 2 + 50, H // 2 - 100), line_color, line_thickness)
+
+    # Line 4
+    cv2.line(frame, (W // 2 - 50, H), (0, H // 2 - 100), line_color, line_thickness)
+
+    # Line 5
+    cv2.line(frame, (W // 2 + 50, H), (W, H // 2 - 100), line_color, line_thickness)
+
+    
+    cv2.imshow('Camera Feed with Lines', frame)
+
+    key = cv2.waitKey(1)
+    if key == 27: 
+        break
+    elif key == ord('f') or key == ord('F'): 
+        flip = not flip
+
+cap.release()
+cv2.destroyAllWindows()
