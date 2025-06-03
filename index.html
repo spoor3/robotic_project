@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Allice Apple Tree</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Allice Apple Tree, In a garden, there are several apple trees planted in a grid format. Each point (i, j) in the grid has | i | + | j | apples. Alice can buy a square plot centered at (0, 0). Find the minimum perimeter of the plot (1 unit having length = 1) such that she can collect ">
+    <link rel="stylesheet" href="theme.css">
+    <style>
+    
+.normal_text {
+font-family: Arial;
+font-size: 11.0PT;
+color: #000000;
+line-height: 1.15;
+direction: ltr;
+}
+h1 {
+font-size: 20.0PT;
+padding-top: 20.0PT;
+padding-bottom: 6.0PT;
+direction: ltr;
+}
+h2 {
+font-size: 16.0PT;
+padding-top: 18.0PT;
+padding-bottom: 6.0PT;
+direction: ltr;
+}
+h3 {
+font-size: 14.0PT;
+color: #434343;
+padding-top: 16.0PT;
+padding-bottom: 4.0PT;
+direction: ltr;
+}
+h4 {
+font-size: 12.0PT;
+color: #666666;
+padding-top: 14.0PT;
+padding-bottom: 4.0PT;
+direction: ltr;
+}
+h5 {
+font-size: 11.0PT;
+color: #666666;
+padding-top: 12.0PT;
+padding-bottom: 4.0PT;
+direction: ltr;
+}
+h6 {
+font-size: 11.0PT;
+color: #666666;
+font-style: italic;
+padding-top: 12.0PT;
+padding-bottom: 4.0PT;
+direction: ltr;
+}
+.title {
+font-size: 26.0PT;
+padding-bottom: 3.0PT;
+direction: ltr;
+}
+.subtitle {
+font-family: Arial;
+font-size: 15.0PT;
+color: #666666;
+padding-bottom: 16.0PT;
+direction: ltr;
+}
+
+
+    </style>
+</head>
+<body>
+<header>
+    <div class="hamburger-menu" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <nav>
+    <ul>
+        <li><a href="index.html">Allice Apple Tree</a></li>
+        <li><a href="confirmed_autonomous_testplan.html">confirmed_autonomous_testplan</a></li>
+    </ul>
+    </nav>
+</header>
+<div class="content"clear: both; overflow: auto; ">
+<div style="clear: both;">&nbsp;</div><br><p class="normal_text" style='direction: ltr; '><span style=''>Allice Apple Tree,
+</span></p><p class="normal_text" style='direction: ltr; '><span style=''>In a garden, there are several apple trees planted in a grid format. 
+</span></p><p class="normal_text" style='direction: ltr; '><span style=''>Each point (i, j) in the grid has | i | + | j | apples. 
+</span></p><p class="normal_text" style='direction: ltr; '><span style=''>Alice can buy a square plot centered at (0, 0). 
+</span></p><p class="normal_text" style='direction: ltr; '><span style=''>Find the minimum perimeter of the plot (1 unit having length = 1) 
+</span></p><p class="normal_text" style='direction: ltr; '><span style=''>such that she can collect at least X apples. 
+</span></p><p class="normal_text" style='direction: ltr; '><span style=''>All plants on the perimeter of the plot are also included.
+</span></p><p class="normal_text" style='direction: ltr; '><span style=''>Format:
+</span></p><p class="normal_text" style='direction: ltr; '><span style=''>Input:
+</span></p><p class="normal_text" style='direction: ltr; '><span style=''>X denotes the number of apples Alice has to collect.
+</span></p><p class="normal_text" style='direction: ltr; '><span style=''>Output:
+</span></p><p class="normal_text" style='direction: ltr; '><span style=''>Your function should return the minimum perimeter of the plot, which should be bought by Alice.
+</span></p><p class="normal_text" style='direction: ltr; '><span style=''>Example:
+</span></p><p class="normal_text" style='direction: ltr; '><span style=''>Input:1
+</span></p><p class="normal_text" style='direction: ltr; '><span style=''>1
+</span></p><p class="normal_text" style='direction: ltr; '><span style=''>Output:1
+</span></p><p class="normal_text" style='direction: ltr; '><span style=''>8
+</span></p><p class="normal_text" style='direction: ltr; '><span style=''>
+</span></p><p class="normal_text" style='direction: ltr; '><span style=''>Input:2
+</span></p><p class="normal_text" style='direction: ltr; '><span style=''>57
+</span></p><p class="normal_text" style='direction: ltr; '><span style=''>Output:2
+</span></p><p class="normal_text" style='direction: ltr; '><span style=''>16
+</span></p><p class="normal_text" style='direction: ltr; '><span style=''>Explanation:
+</span></p><p class="normal_text" style='direction: ltr; '><span style=''>Apples in each unit square will be | i | + | j | as a length of 1 unit will contain 0 apples (0,0).
+</span></p><p class="normal_text" style='direction: ltr; '><span style=''> Hence, a plot of side length 2 will be taken keeping (0, 0) at the center.
+</span></p><p class="normal_text" style='direction: ltr; '><span style=''>
+</span></p><p class="normal_text" style='direction: ltr; '><span style=''>
+</span></p><p class="normal_text" style='direction: ltr; '><span style=''>
+</span></p><p class="normal_text" style='direction: ltr; '><span style=''>importjava.util.*;
+</span></p><p class="normal_text" style='direction: ltr; '><span style=''>public class Main
+</span></p><p class="normal_text" style='direction: ltr; '><span style=''>{
+</span></p><p class="normal_text" style='direction: ltr; '><span style=''>	public static void main(String[] args) {
+</span></p><p class="normal_text" style='direction: ltr; '><span style=''>	&nbsp;&nbsp;&nbsp;&nbsp;Scanner sc=new Scanner(System.in);
+</span></p><p class="normal_text" style='direction: ltr; '><span style=''>	int apple=sc.nextInt();//12
+</span></p><p class="normal_text" style='direction: ltr; '><span style=''>	intcnt=0,sum=0;
+</span></p><p class="normal_text" style='direction: ltr; '><span style=''>	while(sum<apple){//0<12
+</span></p><p class="normal_text" style='direction: ltr; '><span style=''>	cnt++;//1
+</span></p><p class="normal_text" style='direction: ltr; '><span style=''>	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sum+=(12*cnt*cnt);//sum=12
+</span></p><p class="normal_text" style='direction: ltr; '><span style=''>	&nbsp;&nbsp;&nbsp;&nbsp;}
+</span></p><p class="normal_text" style='direction: ltr; '><span style=''>	System.out.println((8*(cnt)));//8
+</span></p><p class="normal_text" style='direction: ltr; '><span style=''>	}
+</span></p><p class="normal_text" style='direction: ltr; '><span style=''>}
+</span></p><p class="normal_text" style='direction: ltr; '><span style=''>
+</span></p><p class="normal_text" style='direction: ltr; '><span style=''>
+</span></p><p class="normal_text" style='direction: ltr; '><span style=''>
+</span></p><p class="normal_text" style='direction: ltr; '><span style=''>
+</span></p>
+</div><footer>
+    Created for free by
+    <a href="https://gdocweb.com" target="_blank">gdocweb</a>. <br>
+    Convert Google Docs files to full fledged websites <b>for free</b>.
+</footer>
+<script>
+function toggleMenu() {
+    var header = document.querySelector('header');
+    header.classList.toggle('nav-active');
+}
+
+function toggleSubmenu(event, submenuId) {
+    var submenu = document.getElementById(submenuId);
+    var parentLi = submenu.parentElement;
+    parentLi.classList.toggle('submenu-active');
+    event.stopPropagation();
+}
+
+window.onclick = function(event) {
+    var submenus = document.getElementsByClassName("submenu");
+    for (var i = 0; i < submenus.length; i++) {
+        var parentLi = submenus[i].parentElement;
+        if (!parentLi.contains(event.target)) {
+            parentLi.classList.remove('submenu-active');
+        }
+    }
+}
+</script>
+</body>
+</html>
