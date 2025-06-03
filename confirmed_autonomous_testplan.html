@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>confirmed_autonomous_testplan</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Rover Testing Table  Test No.  Test Name  Test Description (incl. Approach)  Requirements Tested  Pass / Fail Criteria  Results of the Tests  Test Status  T-01  Odometry Calibration  Verify encoder-based odometry by teleoperating the rover forward and comparing with encoder outputs. Requires linear acceleration (X=1.0, Y=0.0, Z=0.0) and zero angular acceleration during ">
+    <link rel="stylesheet" href="theme.css">
+    <style>
+    
+@font-face {   font-family: 'Inter';   font-style: normal;   font-weight: 400;   font-display: swap;   src: url(https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfMZg.ttf) format('truetype'); } 
+@font-face {   font-family: 'Quattrocento Sans';   font-style: normal;   font-weight: 400;   font-display: swap;   src: url(https://fonts.gstatic.com/s/quattrocentosans/v18/va9c4lja2NVIDdIAAoMR5MfuElaRB3zO.ttf) format('truetype'); } 
+.normal_text {
+font-family: Georgia;
+font-size: 10.5PT;
+color: #000000;
+padding-bottom: 6.0PT;
+line-height: 1.0;
+direction: ltr;
+}
+h1 {
+font-family: Times New Roman;
+font-size: 24.0PT;
+font-weight: bold;
+line-height: 1.0;
+direction: ltr;
+}
+h2 {
+font-family: Times New Roman;
+font-size: 18.0PT;
+font-weight: bold;
+line-height: 1.0;
+direction: ltr;
+}
+h3 {
+font-size: 14.0PT;
+font-weight: bold;
+padding-top: 14.0PT;
+padding-bottom: 4.0PT;
+direction: ltr;
+}
+h4 {
+font-size: 12.0PT;
+font-weight: bold;
+padding-top: 12.0PT;
+padding-bottom: 2.0PT;
+direction: ltr;
+}
+h5 {
+font-size: 11.0PT;
+font-weight: bold;
+padding-top: 11.0PT;
+padding-bottom: 2.0PT;
+direction: ltr;
+}
+h6 {
+font-size: 10.0PT;
+font-weight: bold;
+padding-top: 10.0PT;
+padding-bottom: 2.0PT;
+direction: ltr;
+}
+.title {
+font-size: 36.0PT;
+font-weight: bold;
+padding-top: 24.0PT;
+padding-bottom: 6.0PT;
+direction: ltr;
+}
+.subtitle {
+font-family: Georgia;
+font-size: 24.0PT;
+color: #666666;
+font-style: italic;
+padding-top: 18.0PT;
+padding-bottom: 4.0PT;
+direction: ltr;
+}
+
+
+    </style>
+</head>
+<body>
+<header>
+    <div class="hamburger-menu" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <nav>
+    <ul>
+        <li><a href="index.html">Allice Apple Tree</a></li>
+        <li><a href="confirmed_autonomous_testplan.html">confirmed_autonomous_testplan</a></li>
+    </ul>
+    </nav>
+</header>
+<div class="content"clear: both; overflow: auto; ">
+<div style="clear: both;">&nbsp;</div><br><p class="normal_text" style='padding-top: 15.75PT; padding-bottom: 5.25PT; line-height: 1.5; direction: ltr; '><span style='font-family: Inter; font-size: 12.0PT; color: #000000; '><strong>Rover Testing Table</strong></span><span style=''>
+</span></p><table><tr><td><p class="normal_text" style='line-height: 1.5; direction: ltr; '><span style='font-family: Inter; font-size: 8.5PT; color: #000000; '>Test No.</span><span style=''>
+</span></p></td><td><p class="normal_text" style='line-height: 1.5; direction: ltr; '><span style='font-family: Inter; font-size: 8.5PT; color: #000000; '>Test Name</span><span style=''>
+</span></p></td><td><p class="normal_text" style='line-height: 1.5; direction: ltr; '><span style='font-family: Inter; font-size: 8.5PT; color: #000000; '>Test Description (incl. Approach)</span><span style=''>
+</span></p></td><td><p class="normal_text" style='line-height: 1.5; direction: ltr; '><span style='font-family: Inter; font-size: 8.5PT; color: #000000; '>Requirements Tested</span><span style=''>
+</span></p></td><td><p class="normal_text" style='line-height: 1.5; direction: ltr; '><span style='font-family: Inter; font-size: 8.5PT; color: #000000; '>Pass / Fail Criteria</span><span style=''>
+</span></p></td><td><p class="normal_text" style='line-height: 1.5; direction: ltr; '><span style='font-family: Inter; font-size: 8.5PT; color: #000000; '>Results of the Tests</span><span style=''>
+</span></p></td><td><p class="normal_text" style='line-height: 1.5; direction: ltr; '><span style='font-family: Inter; font-size: 8.5PT; color: #000000; '>Test Status</span><span style=''>
+</span></p></td></tr><tr><td><p class="normal_text" style='line-height: 1.5; direction: ltr; '><span style='font-family: Inter; font-size: 8.5PT; color: #000000; '>T-01</span><span style=''>
+</span></p></td><td><p class="normal_text" style='line-height: 1.5; direction: ltr; '><span style='font-family: Inter; font-size: 8.5PT; color: #000000; '><strong>Odometry Calibration</strong></span><span style=''>
+</span></p></td><td><p class="normal_text" style='line-height: 1.5; direction: ltr; '><span style='font-family: Inter; font-size: 8.5PT; color: #000000; '>Verify encoder-based odometry by </span><span style='font-family: Inter; font-size: 8.5PT; '>teleoperating the</span><span style='font-family: Inter; font-size: 8.5PT; color: #000000; '> rover forward and comparing with encoder outputs. Requires linear acceleration (X=1.0, Y=0.0, Z=0.0) and zero angular acceleration during straight motion.</span><span style=''>
+</span></p></td><td><p class="normal_text" style='line-height: 1.5; direction: ltr; '><span style='font-family: Inter; font-size: 8.5PT; color: #000000; '>REQ-NAV-001</span><span style=''>
+</span></p></td><td><p class="normal_text" style='line-height: 1.5; direction: ltr; '><span style='font-family: Inter; font-size: 8.5PT; color: #000000; '>Odometry matches manual measurements within acceptable tolerance</span><span style=''>
+</span></p></td><td><p class="normal_text" style='line-height: 1.5; direction: ltr; '><span style='font-family: Inter; font-size: 8.5PT; color: #000000; '>Achieved specified p</span><span style='font-family: Inter; font-size: 8.5PT; '>osition ,</span><span style='font-family: Inter; font-size: 8.5PT; color: #000000; '>linear/angular </span><span style='font-family: Inter; font-size: 8.5PT; '>velocity, acceleration </span><span style='font-family: Inter; font-size: 8.5PT; color: #000000; '>values</span><span style='font-family: Inter; font-size: 8.5PT; '> in x, y, z coordinates .</span><span style='font-family: Inter; font-size: 8.5PT; color: #000000; '>Odometry matched manual calculat</span><span style='font-family: Inter; font-size: 8.5PT; '>ed values for a particular stretch of distance. </span><span style=''>
+</span></p></td><td><p class="normal_text" style='line-height: 1.5; direction: ltr; '><span style='font-family: Inter; font-size: 8.5PT; color: #000000; '>Passed</span><span style=''>
+</span></p></td></tr><tr><td><p class="normal_text" style='line-height: 1.5; direction: ltr; '><span style='font-family: Inter; font-size: 8.5PT; color: #000000; '>T-02</span><span style=''>
+</span></p></td><td><p class="normal_text" style='line-height: 1.5; direction: ltr; '><span style='font-family: Inter; font-size: 8.5PT; color: #000000; '><strong>Aruco Pose Estimation</strong></span><span style=''>
+</span></p></td><td><p class="normal_text" style='line-height: 1.5; direction: ltr; '><span style='font-family: Inter; font-size: 8.5PT; color: #000000; '>Test 6D pose estimation of Aruco markers relative to rover's camera using pre-placed markers at known positions.</span><span style=''>
+</span></p></td><td><p class="normal_text" style='line-height: 1.5; direction: ltr; '><span style='font-family: Inter; font-size: 8.5PT; color: #000000; '>REQ-VIS-002</span><span style=''>
+</span></p></td><td><p class="normal_text" style='line-height: 1.5; direction: ltr; '><span style='font-family: Inter; font-size: 8.5PT; color: #000000; '>Accurate detection of marker position/orientation</span><span style=''>
+</span></p></td><td><p class="normal_text" style='line-height: 1.5; direction: ltr; '><span style='font-family: Inter; font-size: 8.5PT; color: #000000; '>Detected marker at x=1.0m, y=0.5m, z=2.0m with roll=30°, pitch=10°, yaw=5° relative to camera.</span><span style=''>
+</span></p></td><td><p class="normal_text" style='line-height: 1.5; direction: ltr; '><span style='font-family: Inter; font-size: 8.5PT; color: #000000; '>Passed</span><span style=''>
+</span></p></td></tr><tr><td><p class="normal_text" style='line-height: 1.5; direction: ltr; '><span style='font-family: Inter; font-size: 8.5PT; color: #000000; '>T-03</span><span style=''>
+</span></p></td><td><p class="normal_text" style='line-height: 1.5; direction: ltr; '><span style='font-family: Inter; font-size: 8.5PT; color: #000000; '><strong>Navigation Simulation</strong></span><span style=''>
+</span></p></td><td><p class="normal_text" style='line-height: 1.5; direction: ltr; '><span style='font-family: Inter; font-size: 8.5PT; color: #000000; '>Validate collision avoidance and path planning in simulated environment with static/dynamic obstacles.</span><span style=''>
+</span></p></td><td><p class="normal_text" style='line-height: 1.5; direction: ltr; '><span style='font-family: Inter; font-size: 8.5PT; color: #000000; '>REQ-NAV-003</span><span style=''>
+</span></p></td><td><p class="normal_text" style='line-height: 1.5; direction: ltr; '><span style='font-family: Inter; font-size: 8.5PT; color: #000000; '>Successful navigation without collisions</span><span style=''>
+</span></p></td><td><p class="normal_text" style='line-height: 1.5; direction: ltr; '><span style='font-family: Inter; font-size: 8.5PT; color: #000000; '>Completed 5 simulation scenarios with obstacle avoidance and multi-rover coordination</span><span style=''>
+</span></p></td><td><p class="normal_text" style='line-height: 1.5; direction: ltr; '><span style='font-family: Inter; font-size: 8.5PT; color: #000000; '>Failed</span><span style=''>
+</span></p></td></tr><tr><td><p class="normal_text" style='line-height: 1.5; direction: ltr; '><span style='font-family: Inter; font-size: 8.5PT; color: #000000; '>T-04</span><span style=''>
+</span></p></td><td><p class="normal_text" style='line-height: 1.5; direction: ltr; '><span style='font-family: Inter; font-size: 8.5PT; color: #000000; '><strong>Obstacle Detection</strong></span><span style=''>
+</span></p></td><td><p class="normal_text" style='line-height: 1.5; direction: ltr; '><span style='font-family: Inter; font-size: 8.5PT; color: #000000; '>Verify RealSense pointcloud data processing for obstacle</span><span style='font-family: Inter; font-size: 8.5PT; '> </span><span style='font-family: Inter; font-size: 8.5PT; color: #000000; '> detection.</span><span style='font-family: Inter; font-size: 8.5PT; '>
+</span></p><p class="normal_text" style='line-height: 1.5; direction: ltr; '><span style='font-family: Inter; font-size: 8.5PT; '>Processing of pointcloud data includes filtering of the Data to a narrow fov of the realsense and adding neccesary limits on the x , y ,z values of the point clouds generated from the enviroment for effective classification of obstacles .
+</span></p></td><td><p class="normal_text" style='line-height: 1.5; direction: ltr; '><span style='font-family: Inter; font-size: 8.5PT; color: #000000; '>REQ-SEN-002</span><span style=''>
+</span></p></td><td><p class="normal_text" style='line-height: 1.5; direction: ltr; '><span style='font-family: Inter; font-size: 8.5PT; color: #000000; '>Continuous pointcloud data flow at expected resolution</span><span style='font-family: Inter; font-size: 8.5PT; '> and filtered pointcloud data should indicate
+</span></p><p class="normal_text" style='line-height: 1.5; direction: ltr; '><span style='font-family: Inter; font-size: 8.5PT; '>Presence of obstacle. </span><span style=''>
+</span></p></td><td><p class="normal_text" style='line-height: 1.5; direction: ltr; '><span style='font-family: Inter; font-size: 8.5PT; color: #000000; '>Achieved persistent pointcloud data stream</span><span style='font-family: Inter; font-size: 8.5PT; '> and detection&nbsp;&nbsp;of obstacle through the filtered point cloud points .</span><span style=''>
+</span></p></td><td><p class="normal_text" style='line-height: 1.5; direction: ltr; '><span style='font-family: Inter; font-size: 8.5PT; color: #000000; '>Passed</span><span style=''>
+</span></p></td></tr><tr><td><p class="normal_text" style='line-height: 1.5; direction: ltr; '><span style='font-family: Inter; font-size: 8.5PT; color: #000000; '>T-05</span><span style=''>
+</span></p></td><td><p class="normal_text" style='line-height: 1.5; direction: ltr; '><span style='font-family: Inter; font-size: 8.5PT; color: #000000; '><strong>Autonomous Mode Activation</strong></span><span style=''>
+</span></p></td><td><p class="normal_text" style='line-height: 1.5; direction: ltr; '><span style='font-family: Inter; font-size: 8.5PT; color: #000000; '>Confirm rover initiates autonomous tasks within 5s</span><span style='font-family: Inter; font-size: 8.5PT; '>econds us</span><span style='font-family: Inter; font-size: 8.5PT; color: #000000; '>ing finite state machine (FSM) transitions.</span><span style=''>
+</span></p></td><td><p class="normal_text" style='line-height: 1.5; direction: ltr; '><span style='font-family: Inter; font-size: 8.5PT; color: #000000; '>REQ-SYS-015</span><span style=''>
+</span></p></td><td><p class="normal_text" style='line-height: 1.5; direction: ltr; '><span style='font-family: Inter; font-size: 8.5PT; color: #000000; '>System ready for operation within 5s</span><span style='font-family: Inter; font-size: 8.5PT; '>econds </span><span style='font-family: Inter; font-size: 8.5PT; color: #000000; '>of mode switch</span><span style=''>
+</span></p></td><td><p class="normal_text" style='direction: ltr; '><span style=''>The rover only received command velocities (cmd_vel) after a 5-second initialization of the autonomous stack or mode switch.
+</span></p></td><td><p class="normal_text" style='direction: ltr; '><span style=''>Passed
+</span></p></td></tr><tr><td><p class="normal_text" style='line-height: 1.5; direction: ltr; '><span style='font-family: Inter; font-size: 8.5PT; color: #000000; '>T-06</span><span style=''>
+</span></p></td><td><p class="normal_text" style='line-height: 1.5; direction: ltr; '><span style='font-family: Inter; font-size: 8.5PT; color: #000000; '><strong>Proximity Marker Detection</strong></span><span style=''>
+</span></p></td><td><p class="normal_text" style='line-height: 1.5; direction: ltr; '><span style='font-family: Inter; font-size: 8.5PT; color: #000000; '>Identify closest Aruco marker using depth-sorted pose estimation from multiple visible markers.</span><span style=''>
+</span></p></td><td><p class="normal_text" style='line-height: 1.5; direction: ltr; '><span style='font-family: Inter; font-size: 8.5PT; color: #000000; '>REQ-VIS-003</span><span style=''>
+</span></p></td><td><p class="normal_text" style='line-height: 1.5; direction: ltr; '><span style='font-family: Inter; font-size: 8.5PT; color: #000000; '>Correct identification of nearest marker</span><span style=''>
+</span></p></td><td><p class="normal_text" style='line-height: 1.5; direction: ltr; '><span style='font-family: Inter; font-size: 8.5PT; color: #000000; '>Closest marker detected at x=0.8m, y=0.2m, z=1.5m with roll=15°, pitch=5°, yaw=10°</span><span style=''>
+</span></p></td><td><p class="normal_text" style='line-height: 1.5; direction: ltr; '><span style='font-family: Inter; font-size: 8.5PT; color: #000000; '>Passed</span><span style=''>
+</span></p></td></tr></table><p class="normal_text" style='direction: ltr; '><span style=''>
+</span></p><p class="normal_text" style='padding-top: 5.25PT; padding-bottom: 5.25PT; line-height: 1.5; direction: ltr; '><span style=''>
+</span></p><p class="normal_text" style='padding-top: 5.25PT; padding-bottom: 5.25PT; line-height: 1.5; direction: ltr; '><span style=''>
+</span></p><p class="normal_text" style='padding-top: 5.25PT; padding-bottom: 5.25PT; line-height: 1.5; direction: ltr; '><span style=''>
+</span></p><p class="normal_text" style='padding-top: 5.25PT; padding-bottom: 5.25PT; line-height: 1.5; direction: ltr; '><span style=''>
+</span></p><p class="normal_text" style='padding-top: 5.25PT; padding-bottom: 5.25PT; line-height: 1.5; direction: ltr; '><span style=''>
+</span></p><p class="normal_text" style='padding-top: 5.25PT; padding-bottom: 5.25PT; line-height: 1.5; direction: ltr; '><img src="img/d4b4d2db35a3652875e961a93e149d5434a82d2b.png" style="width: 633.8415px; height: 412.0303px; margin: 0.0PT 0.0PT 0.0PT 0.0PT; "><span style=''>
+</span></p><p class="normal_text" style='padding-top: 5.25PT; padding-bottom: 5.25PT; line-height: 1.5; direction: ltr; '><span style=''>For T-02 
+</span></p><p class="normal_text" style='padding-top: 5.25PT; padding-bottom: 5.25PT; line-height: 1.5; direction: ltr; '><span style=''>
+</span></p><p class="normal_text" style='padding-top: 5.25PT; padding-bottom: 5.25PT; line-height: 1.5; direction: ltr; '><span style=''>
+</span></p><p class="normal_text" style='padding-top: 5.25PT; padding-bottom: 5.25PT; line-height: 1.5; direction: ltr; '><span style=''>
+</span></p><p class="normal_text" style='padding-top: 5.25PT; padding-bottom: 5.25PT; line-height: 1.5; direction: ltr; '><span style=''>
+</span></p><p class="normal_text" style='padding-top: 5.25PT; padding-bottom: 5.25PT; line-height: 1.5; direction: ltr; '><img src="img/9457888a4808e838745112306dfa456329ef92cf.png" style="width: 633.8415px; height: 386.10344999999995px; margin: 0.0PT 0.0PT 0.0PT 0.0PT; "><span style=''>
+</span></p><p class="normal_text" style='padding-top: 5.25PT; padding-bottom: 5.25PT; line-height: 1.5; direction: ltr; '><span style=''>For T-06
+</span></p><p class="normal_text" style='padding-top: 5.25PT; padding-bottom: 5.25PT; line-height: 1.5; direction: ltr; '><span style=''>
+</span></p><p class="normal_text" style='padding-top: 5.25PT; padding-bottom: 5.25PT; line-height: 1.5; direction: ltr; '><span style=''>
+</span></p><p class="normal_text" style='padding-top: 5.25PT; padding-bottom: 5.25PT; line-height: 1.5; direction: ltr; '><span style=''>
+</span></p><p class="normal_text" style='padding-top: 5.25PT; padding-bottom: 5.25PT; line-height: 1.5; direction: ltr; '><span style=''>
+</span></p><p class="normal_text" style='padding-top: 5.25PT; padding-bottom: 5.25PT; line-height: 1.5; direction: ltr; '><span style=''>
+</span></p><p class="normal_text" style='padding-top: 5.25PT; padding-bottom: 5.25PT; line-height: 1.5; direction: ltr; '><span style=''>
+</span></p><p class="normal_text" style='padding-top: 5.25PT; padding-bottom: 5.25PT; line-height: 1.5; direction: ltr; '><span style=''>
+</span></p><p class="normal_text" style='padding-top: 5.25PT; padding-bottom: 5.25PT; line-height: 1.5; direction: ltr; '><span style=''>
+</span></p><p class="normal_text" style='padding-top: 5.25PT; padding-bottom: 5.25PT; line-height: 1.5; direction: ltr; '><span style=''>
+</span></p><p class="normal_text" style='padding-top: 5.25PT; padding-bottom: 5.25PT; line-height: 1.5; direction: ltr; '><span style=''>
+</span></p><p class="normal_text" style='padding-top: 5.25PT; padding-bottom: 5.25PT; line-height: 1.5; direction: ltr; '><span style=''>
+</span></p><p class="normal_text" style='padding-top: 5.25PT; padding-bottom: 5.25PT; line-height: 1.5; direction: ltr; '><span style=''>
+</span></p><p class="normal_text" style='padding-top: 5.25PT; padding-bottom: 5.25PT; line-height: 1.5; direction: ltr; '><span style=''>Pdd
+</span></p><p class="normal_text" style='padding-top: 14.0PT; padding-bottom: 14.0PT; direction: ltr; '><span style='font-family: Quattrocento Sans; font-size: 24.0PT; '><strong>Autonomous Navigation System for ERC Navigation Challenge
+</strong></span></p><p class="normal_text" style='line-height: 1.0; direction: ltr; '><span style='font-family: Quattrocento Sans; font-size: 12.0PT; '>Our autonomous navigation system utilizes a multi-layered approach to enable robust, intelligent movement through unknown environments. This comprehensive system integrates perception, localization, and planning components to deliver reliable navigation capabilities for the ERC Navigation Challenge.
+</span></p><p class="normal_text" style='padding-top: 14.0PT; padding-bottom: 14.0PT; line-height: 1.0; direction: ltr; '><span style='font-family: var(--font-fk-grotesk); font-size: 18.0PT; '>Core Navigation Architecture
+</span></p><p class="normal_text" style='line-height: 1.0; direction: ltr; '><span style='font-family: Quattrocento Sans; font-size: 12.0PT; '>The autonomous system is built around three fundamental components that work in concert to achieve reliable navigation: Path Planning & Execution, Perception System, and Localization & Mapping. Each component fulfils a specific role while maintaining continuous communication with other systems to ensure cohesive operation.
+</span></p><p class="normal_text" style='padding-top: 14.0PT; padding-bottom: 14.0PT; line-height: 1.0; direction: ltr; '><span style='font-family: var(--font-fk-grotesk); font-size: 18.0PT; '><strong>Path Planning & Execution
+</strong></span></p><p class="normal_text" style='line-height: 1.0; direction: ltr; '><span style='font-family: Quattrocento Sans; font-size: 12.0PT; '>The Path Planning & Execution component manages the high-level navigation strategy through an advanced waypoint management system. This system incorporates waypoint storage, goal selection logic, progress tracking, and waypoint validation modules. The waypoint storage maintains a database of target locations, while the goal selection logic determines the optimal next destination based on mission parameters and environmental conditions. Progress tracking continuously monitors the robot's advancement toward goals, enabling dynamic adjustments when necessary.
+</span></p><p class="normal_text" style='line-height: 1.0; direction: ltr; '><span style='font-family: Quattrocento Sans; font-size: 12.0PT; '>Behaviour tree configuration provides the decision-making framework, allowing the system to select appropriate actions based on environmental conditions and mission objectives. This implementation utilizes controller plugins that translate high-level navigation plans into specific velocity commands for the robot's locomotion system</span><span style='font-family: Courier New; font-size: 12.0PT; color: #0000ff; '><a href="https://foxglove.dev/blog/autonomous-robot-navigation-and-nav2-the-first-steps" style="font-family: Courier New; font-size: 12.0PT; color: #0000ff; ">5</a></span><span style='font-family: Quattrocento Sans; font-size: 12.0PT; '>. Recovery behaviours are integrated to handle exceptional situations like unexpected obstacles or navigation failures.
+</span></p><p class="normal_text" style='padding-top: 14.0PT; padding-bottom: 14.0PT; line-height: 1.0; direction: ltr; '><span style='font-family: var(--font-fk-grotesk); font-size: 18.0PT; '><strong>Perception System
+</strong></span></p><p class="normal_text" style='line-height: 1.0; direction: ltr; '><span style='font-family: Quattrocento Sans; font-size: 12.0PT; '>The Perception System serves as the robot's sensory framework, collecting and processing environmental data through three key subsystems: Sensor Data Acquisition, Obstacle Detection, and Terrain Classification.
+</span></p><p class="normal_text" style='line-height: 1.0; direction: ltr; '><span style='font-family: Quattrocento Sans; font-size: 12.0PT; '>The Sensor Data Acquisition subsystem integrates multiple sensor feeds including camera processing, IMU integration, and encoder readings. Camera data provides visual information about the environment, while the IMU (Inertial Measurement Unit) measures orientation, angular velocity, and linear acceleration. This IMU data is processed through an Extended Kalman Filter (EKF) which fuses these measurements with other sensors to estimate position, velocity, and orientation with higher accuracy than any single sensor could provide.
+</span></p><p class="normal_text" style='line-height: 1.0; direction: ltr; '><span style='font-family: Quattrocento Sans; font-size: 12.0PT; '>The Obstacle Detection subsystem processes this sensor data to identify navigation hazards. Point cloud processing converts depth information from sensors into 3D representations of the environment. This data feeds into cost map generation, creating a 2D grid representation where cells are assigned values based on traversability. The cost map prediction module then anticipates potential obstacle movements, enabling proactive navigation planning.
+</span></p><p class="normal_text" style='line-height: 1.0; direction: ltr; '><span style='font-family: Quattrocento Sans; font-size: 12.0PT; '>Terrain Classification analyses the environment to determine navigability across different surfaces. This includes safe path classification to identify optimal routes, terrain recognition to categorize surface types, traversability analysis to evaluate passage difficulty, and slope detection to identify dangerous inclines. These classifications use texture-based feature extraction and transform-based analysis to categorize terrain into navigable and non-navigable regions with over 95% accuracy.
+</span></p><p class="normal_text" style='padding-top: 14.0PT; padding-bottom: 14.0PT; line-height: 1.0; direction: ltr; '><span style='font-family: var(--font-fk-grotesk); font-size: 18.0PT; '><strong>Localization & Mapping
+</strong></span></p><p class="normal_text" style='line-height: 1.0; direction: ltr; '><span style='font-family: Quattrocento Sans; font-size: 12.0PT; '>The Localization & Mapping component establishes the robot's position within its environment and builds a representation of the surroundings. The system implements RTAB Map integration, which combines visual sensors with other data to create comprehensive 3D maps while simultaneously localizing the robot within that map (SLAM). 
+</span></p><p class="normal_text" style='line-height: 1.0; direction: ltr; '><span style='font-family: Quattrocento Sans; font-size: 12.0PT; '>Odometry processing combines multiple data sources including wheel encoders and visual odometry. This data undergoes transformation to a common base reference frame before being combined with IMU and encoder measurements to create high-fidelity position estimates. The map building and storage subsystem maintains both 3D RTAB maps and cost map structures, enabling efficient navigation planning and obstacle avoidance.
+</span></p><p class="normal_text" style='padding-top: 14.0PT; padding-bottom: 14.0PT; line-height: 1.0; direction: ltr; '><span style='font-family: var(--font-fk-grotesk); font-size: 18.0PT; '>Integrated System Operation
+</span></p><p class="normal_text" style='line-height: 1.0; direction: ltr; '><span style='font-family: Quattrocento Sans; font-size: 12.0PT; '>The autonomous navigation system operates through coordinated processing across all components. Sensor data from cameras, IMU, and encoders is continuously collected and processed to update the robot's understanding of its position and surroundings. This data feeds into both the localization system, which updates the robot's position estimate, and the perception system, which identifies obstacles and classifies terrain.
+</span></p><p class="normal_text" style='line-height: 1.0; direction: ltr; '><span style='font-family: Quattrocento Sans; font-size: 12.0PT; '>The Path Planning component uses this information to generate optimal trajectories toward goal waypoints while avoiding detected obstacles. When confronted with challenging terrain, the system evaluates traversability and adjusts its path accordingly. The U-V disparity map-based obstacle detection algorithm achieves over 95% accuracy in identifying navigation hazards, even in varying lighting conditions
+</span></p><p class="normal_text" style='line-height: 1.0; direction: ltr; '><span style='font-family: Quattrocento Sans; font-size: 12.0PT; '>Recovery behaviours activate when the robot encounters unnavigable situations, implementing strategies to reorient and find alternative paths. The waypoint validation system ensures that selected goals are achievable given current environmental constraints, preventing navigation toward unreachable locations.
+</span></p><p class="normal_text" style='line-height: 1.0; direction: ltr; '><span style='font-family: Quattrocento Sans; font-size: 12.0PT; '>Through this integrated approach, our autonomous navigation system successfully navigates complex environments without human intervention, leveraging advanced sensor fusion, terrain analysis, and adaptive planning to complete the ERC Navigation Challenge mission requirements.
+</span></p><p class="normal_text" style='padding-top: 5.25PT; padding-bottom: 5.25PT; line-height: 1.5; direction: ltr; '><span style=''>
+</span></p>
+</div><footer>
+    Created for free by
+    <a href="https://gdocweb.com" target="_blank">gdocweb</a>. <br>
+    Convert Google Docs files to full fledged websites <b>for free</b>.
+</footer>
+<script>
+function toggleMenu() {
+    var header = document.querySelector('header');
+    header.classList.toggle('nav-active');
+}
+
+function toggleSubmenu(event, submenuId) {
+    var submenu = document.getElementById(submenuId);
+    var parentLi = submenu.parentElement;
+    parentLi.classList.toggle('submenu-active');
+    event.stopPropagation();
+}
+
+window.onclick = function(event) {
+    var submenus = document.getElementsByClassName("submenu");
+    for (var i = 0; i < submenus.length; i++) {
+        var parentLi = submenus[i].parentElement;
+        if (!parentLi.contains(event.target)) {
+            parentLi.classList.remove('submenu-active');
+        }
+    }
+}
+</script>
+</body>
+</html>
